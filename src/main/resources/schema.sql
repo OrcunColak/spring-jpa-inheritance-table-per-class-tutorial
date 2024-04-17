@@ -1,22 +1,23 @@
-create table books (
-  id bigint not null,
-  item_name varchar(255),
-  author varchar(255),
-  isbn varchar(255), primary key (id)
+CREATE TABLE items (
+  id BIGINT NOT NULL,
+  item_name VARCHAR(255),
+  PRIMARY KEY (id)
 );
 
-create table items (
-  id bigint not null,
-  item_name varchar(255),
-  primary key (id)
+CREATE TABLE books (
+  id BIGINT NOT NULL,
+  item_name VARCHAR(255),
+  author VARCHAR(255),
+  isbn VARCHAR(255),
+  PRIMARY KEY (id)
 );
 
-create table movies (
-  id bigint not null,
-  item_name varchar(255),
-  director varchar(255),
-  duration integer not null,
-  primary key (id)
+CREATE TABLE movies (
+  id BIGINT NOT NULL,
+  item_name VARCHAR(255),
+  director VARCHAR(255),
+  duration INTEGER NOT NULL,
+  PRIMARY KEY (id)
 );
 
-create sequence items_seq start with 1 increment by 1
+CREATE SEQUENCE items_seq START WITH 1 INCREMENT BY 1;
